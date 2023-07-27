@@ -2,14 +2,18 @@ import pandas as pd
 import streamlit as st
 
 d = pd.read_excel('Transcript.xlsx')
+d1 = pd.read_excel('Transcript-1.xlsx')
+d2 = pd.read_excel('Transcript-2.xlsx')
+d3 = pd.read_excel('Transcript-3.xlsx')
 
-df = pd.DataFrame(d)
+data_list = [d, d1, d2, d3]
+
 
 st.set_page_config(layout='wide')
 
 
-def get_year_students(year):
-    result_df = df[df['Register Number'].astype(str).str.endswith(str(year))]
+def get_year_students(dataframe, year):
+    result_df = dataframe[dataframe['Register Number'].astype(str).str.endswith(str(year))]
     return result_df
 
 
@@ -68,31 +72,42 @@ def update_grades(initial_df, new_grades_df):
 # updated_df = update_grades(initial_df, new_grades_df)
 
 
-data = get_year_students(2024)
 
-st.write(data)
+year_list = []
+for i in data_list:
+    year_list.append(get_year_students(i,2024))
 
-majors_data = sort_majors(data)
+st.write(year_list[1])
+
+majors_list = []
+for j in year_list:
+    majors_list.append(sort_majors(j))
 
 with st.expander('BA'):
-    ba_data = majors_data['B.Sc - Business Administration']
+    y1 = majors_list[0]
+    ba_data = y1['B.Sc - Business Administration']
     st.write(ba_data)
 
     new_ba_table = create_new_dataframe('ba.txt', ba_data)
     # st.write(new_ba_table)
 
-    updated_ba = update_grades(new_ba_table, ba_data)
-    st.write(updated_ba)
+    for x in majors_list:
+        temp = x['B.Sc - Business Administration']
+        ba_df = update_grades(new_ba_table, temp)
+        new_ba_table = ba_df
 
-with st.expander('CS'):
-    cs_data = majors_data['B.Sc - Computer Science']
-    st.write(cs_data)
+    st.write(new_ba_table)    
 
-    new_cs_table = create_new_dataframe('cs.txt', cs_data)
-    # st.write(new_cs_table)
+    
+# with st.expander('CS'):
+#     cs_data = majors_data['B.Sc - Computer Science']
+#     st.write(cs_data)
 
-    updated_cs = update_grades(new_cs_table, cs_data)
-    st.write(updated_cs)
+#     new_cs_table = create_new_dataframe('cs.txt', cs_data)
+#     # st.write(new_cs_table)
 
-with st.expander('MIS'):
-    st.write(majors_data['B.Sc - Management Information Systems'])
+#     updated_cs = update_grades(new_cs_table, cs_data)
+#     st.write(updated_cs)
+
+# with st.expander('MIS'):
+#     st.write(majors_data['B.Sc - Management Information Systems'])
