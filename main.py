@@ -1,16 +1,15 @@
 import pandas as pd
 import streamlit as st
 
-d = pd.read_excel('Transcript.xlsx')
-d1 = pd.read_excel('Transcript-1.xlsx')
-d2 = pd.read_excel('Transcript-2.xlsx')
-d3 = pd.read_excel('Transcript-3.xlsx')
+t1 = st.file_uploader('Upload Year 1 file', type='xlsx', accept_multiple_files=True)
 
-data_list = [d, d1, d2, d3]
-
-
-st.set_page_config(layout='wide')
-
+data_list = []
+try:
+    # st.write(t1)
+    for i in t1:
+        data_list.append(pd.read_excel(i))
+except:
+    pass
 
 def get_year_students(dataframe, year):
     result_df = dataframe[dataframe['Register Number'].astype(str).str.endswith(str(year))]
@@ -67,47 +66,40 @@ def update_grades(initial_df, new_grades_df):
     return initial_df
 
 
-# Example usage:
-# Assuming initial_df is your initial DataFrame and new_grades_df is the new DataFrame with grades
-# updated_df = update_grades(initial_df, new_grades_df)
+try:
+    year_list = []
+    for i in data_list:
+        year_list.append(get_year_students(i,2024))
 
+    majors_list = []
+    for j in year_list:
+        majors_list.append(sort_majors(j))
 
+    with st.expander('BA'):
+        y1 = majors_list[0]
+        ba_data = y1['B.Sc - Business Administration']
 
-year_list = []
-for i in data_list:
-    year_list.append(get_year_students(i,2024))
+        new_ba_table = create_new_dataframe('ba.txt', ba_data)
 
-st.write(year_list[1])
+        for x in majors_list:
+            temp = x['B.Sc - Business Administration']
+            ba_df = update_grades(new_ba_table, temp)
+            new_ba_table = ba_df
 
-majors_list = []
-for j in year_list:
-    majors_list.append(sort_majors(j))
-
-with st.expander('BA'):
-    y1 = majors_list[0]
-    ba_data = y1['B.Sc - Business Administration']
-    st.write(ba_data)
-
-    new_ba_table = create_new_dataframe('ba.txt', ba_data)
-    # st.write(new_ba_table)
-
-    for x in majors_list:
-        temp = x['B.Sc - Business Administration']
-        ba_df = update_grades(new_ba_table, temp)
-        new_ba_table = ba_df
-
-    st.write(new_ba_table)    
-
+        st.write(new_ba_table)
     
-# with st.expander('CS'):
-#     cs_data = majors_data['B.Sc - Computer Science']
-#     st.write(cs_data)
+    with st.expander('CS'):
+        y2 = majors_list[1]
+        cs_data = y1['B.Sc - Computer Science']
 
-#     new_cs_table = create_new_dataframe('cs.txt', cs_data)
-#     # st.write(new_cs_table)
+        new_cs_table = create_new_dataframe('cs.txt', cs_data)
 
-#     updated_cs = update_grades(new_cs_table, cs_data)
-#     st.write(updated_cs)
+        for x in majors_list:
+            temp = x['B.Sc - Computer Science']
+            cs_df = update_grades(new_cs_table, temp)
+            new_cs_table = cs_df
 
-# with st.expander('MIS'):
-#     st.write(majors_data['B.Sc - Management Information Systems'])
+        st.write(new_cs_table)
+
+except:
+    st.warning('Upload all required documents')

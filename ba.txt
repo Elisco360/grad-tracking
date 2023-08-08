@@ -1,3 +1,40 @@
+Ashesi Success
+Foundations of Design and Entrepreneurship I
+College Algebra
+Calculus I
+Pre-Calculus I
+Written and Oral Communication
+Introduction to Computing and Information Systems
+Organizational Behaviour
+Foundations of Design and Entrepreneurship II
+Pre-Calculus II
+Calculus II
+Text and Meaning
+Leadership Seminar I: What Makes a Good Leader?
+Microeconomics
+Statistics
+Financial Accounting
+Leadership Seminar II: Rights, Ethics and Rule of Law
+Applied Calculus
+Marketing
+Introduction to Finance
+Macroeconomics
+Quantitative Methods
+Leadership Seminar III: The Economic Organization of a Good Society
+International Trade and Policy
+Investments
+Operations Management
+Leadership Seminar IV: Leadership as Service
+Research Methods
+Managerial Accounting
+Corporate Finance
+Business Law
+Entrepreneurship I
+Undergraduate Thesis I (BA)
+Applied Project (BA)
+Competitive Strategy
+Entrepreneurship II
+Undergraduate Thesis II (BA)
 Advanced Managerial Finance
 Africa and the Oil Industry
 Africa in the International Setting
@@ -5,33 +42,21 @@ African Cultural Institutions
 African Literature and Film
 African Music and the Contemporary Art Music Scene
 African Philosophical Thought
-Applied Calculus
-Applied Project (BA)
-Ashesi Success
-Business Law
 Business Law & Ethics for Managers
 Business Writing
-Calculus I
 China-Africa Relations
 Collaborative Team Skills
-College Algebra
 Comparative Politics
-Competitive Strategy
-Corporate Finance
 Creative and Research Internship
 Critical Security Studies
 Development Economics
 Econometrics
 Economic Development and Globalization: Processes, Strategies and Outcomes
 Engineering Calculus
-Entrepreneurship I
-Entrepreneurship II
 Fighting Inequalities and Social Risks in the 21st Century
 Fighting Inequalities and Social Risks in the 21st Century: A Global Perspective
 Finance for Non-finance Managers
-Financial Accounting
 Financial Markets/Institutions
-Foundations of Design and Entrepreneurship I
 Francophone Literature and Creative Writing
 Fundamentals of Agribusiness
 Ghanaian Popular Culture
@@ -41,51 +66,28 @@ Human Rights and Global Development
 International Development
 International Finance
 International Law Human Rights
-International Trade and Policy
 Intro to Policy Analysis
 Introduction to Africana Studies: The Global Black Experience
-Introduction to Computing and Information Systems
 Introduction to Engineering
-Introduction to Finance
 Introductory French I
 Introductory French II
-Investments
 Islam
-Leadership Seminar I: What Makes a Good Leader?
-Leadership Seminar II: Rights, Ethics and Rule of Law
-Leadership Seminar III: The Economic Organization of a Good Society
-Leadership Seminar IV: Leadership as Service
-Macroeconomics
-Managerial Accounting
 Managerial Economics
 Managerial Finance
-Marketing
-Microeconomics
 New Product Development
-Operations Management
 Organisational Development
-Organizational Behaviour
 Personal Financial Management
-Pre-Calculus I
-Pre-Calculus II
 Principles of Economics
 Professional French I
 Project Management
-Quantitative Methods
 Relativism
 Religion in Africa
 Reproductive Health/Human Rights
-Research Methods
 Service Marketing
 Social Enterprise
 Special Topics: American Cultural Training
-Statistics
 Strategic Brand Management
 Supply Chain Management
-Text and Meaning
 The Age of Economists: Globalization, Growth, and Inequalities
-Undergraduate Thesis I (BA)
-Undergraduate Thesis II (BA)
 Venture Capital Investment
 World Politics
-Written and Oral Communication

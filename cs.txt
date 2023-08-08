@@ -1,3 +1,4 @@
+Ashesi Success
 Africa in the International Setting
 African Literature and Film
 African Music and the Contemporary Art Music Scene
@@ -6,7 +7,6 @@ Algorithm Design and Analysis
 Applied Calculus
 Applied Programming for Engineers
 Applied Project (CS)
-Ashesi Success
 Calculus I
 Capitalism and Slavery
 China-Africa Relations
